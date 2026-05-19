@@ -1,12 +1,10 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createBookmark } from '../actions'
 
 export default function NewBookmarkPage() {
-  const router = useRouter()
   const [pending, startTransition] = useTransition()
   const [error, setError] = useState<string | null>(null)
   const [urlError, setUrlError] = useState<string | null>(null)
